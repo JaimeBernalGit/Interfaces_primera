@@ -149,7 +149,7 @@ img { display: block; max-width: 100%; }
 
 // ── FILTROS ────────────────────────────────────────────────────
 .filtros {
-  &__fab {
+  &__mob {
     position: fixed;
     bottom: 1.5rem;
     left: 1.5rem;
@@ -172,7 +172,6 @@ img { display: block; max-width: 100%; }
     left: 1rem;
     width: calc(100% - 2rem);
     max-height: 80vh;
-    overflow-y: auto;
     background: $color-1;
     border-radius: 8px;
     padding: 1rem;
