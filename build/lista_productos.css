@@ -285,7 +285,7 @@ img {
   }
 }
 
-.pie {
+.footer {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -293,20 +293,20 @@ img {
   border-top: 1px solid #44E5E7;
   font-size: 0.85rem;
 }
-.pie address {
+.footer address {
   font-style: normal;
 }
-.pie__redes {
+.footer__redes {
   display: flex;
   gap: 0.75rem;
   align-items: center;
 }
-.pie__icono {
+.footer__icono {
   width: 28px;
   height: 28px;
 }
 @media (min-width: 1024px) {
-  .pie {
+  .footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
