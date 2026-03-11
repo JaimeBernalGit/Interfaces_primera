@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced TFG – Homepage</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="homepage.css" />
+</head>
+<body>
+
+  <header class="navegacion">
+    <a href="homepage.html" class="navegacion__logo">
+      ADVANCED<span>TFG</span>
+    </a>
+    <button class="navegacion__hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="navegacion__menu" id="menu" aria-label="Navegación principal">
+      <a href="homepage.html" class="navegacion__enlace">Homepage</a>
+      <a href="lista_productos.html" class="navegacion__enlace">Proyectos</a>
+      <div class="navegacion__acciones">
+        <a href="#" class="boton">Registrarse</a>
+        <a href="#" class="boton boton--primario">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="principal" aria-labelledby="titulo-principal">
+      <h1 class="principal__titulo" id="titulo-principal">ADVANCED TFG</h1>
+      <p class="principal__subtitulo">Conectando empresas y estudiantes</p>
+      <div class="principal__acciones">
+        <a href="#" class="boton">Registrarse</a>
+        <a href="#" class="boton boton--primario">Login</a>
+      </div>
+    </section>
+
+    <section class="colaboradores" aria-labelledby="titulo-colaboradores">
+      <h2 class="colaboradores__titulo" id="titulo-colaboradores">Nuestros colaboradores</h2>
+      <ul class="colaboradores__cuadricula">
+        <li class="tarjeta">
+          <h3 class="tarjeta__nombre">Empresa</h3>
+          <div class="tarjeta__meta">
+            <span class="tarjeta__avatar"></span>
+            <div>
+              <p>Sector</p>
+              <p>Descripción</p>
+            </div>
+          </div>
+        </li>
+        <li class="tarjeta">
+          <h3 class="tarjeta__nombre">Empresa</h3>
+          <div class="tarjeta__meta">
+            <span class="tarjeta__avatar"></span>
+            <div><p>Sector</p><p>Descripción</p></div>
+          </div>
+        </li>
+        <li class="tarjeta">
+          <h3 class="tarjeta__nombre">Empresa</h3>
+          <div class="tarjeta__meta">
+            <span class="tarjeta__avatar"></span>
+            <div><p>Sector</p><p>Descripción</p></div>
+          </div>
+        </li>
+        <li class="tarjeta">
+          <h3 class="tarjeta__nombre">Empresa</h3>
+          <div class="tarjeta__meta">
+            <span class="tarjeta__avatar"></span>
+            <div><p>Sector</p><p>Descripción</p></div>
+          </div>
+        </li>
+        <li class="tarjeta">
+          <h3 class="tarjeta__nombre">Empresa</h3>
+          <div class="tarjeta__meta">
+            <span class="tarjeta__avatar"></span>
+            <div><p>Sector</p><p>Descripción</p></div>
+          </div>
+        </li>
+        <li class="tarjeta">
+          <h3 class="tarjeta__nombre">Empresa</h3>
+          <div class="tarjeta__meta">
+            <span class="tarjeta__avatar"></span>
+            <div><p>Sector</p><p>Descripción</p></div>
+          </div>
+        </li>
+        <li class="tarjeta">
+          <h3 class="tarjeta__nombre">Empresa</h3>
+          <div class="tarjeta__meta">
+            <span class="tarjeta__avatar"></span>
+            <div><p>Sector</p><p>Descripción</p></div>
+          </div>
+        </li>
+        <li class="tarjeta">
+          <h3 class="tarjeta__nombre">Empresa</h3>
+          <div class="tarjeta__meta">
+            <span class="tarjeta__avatar"></span>
+            <div><p>Sector</p><p>Descripción</p></div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <address>
+      <span>Tel: 999 999 999</span>
+      <span>E-Mail: ejemplo@ejemplo.com</span>
+    </address>
+    <nav class="pie__redes" aria-label="Redes sociales">
+      <a href="#" aria-label="YouTube"><img class="pie__icono" src="img/youtube.png" alt="YouTube" /></a>
+      <a href="#" aria-label="GitHub"><img class="pie__icono" src="img/github.png" alt="GitHub" /></a>
+    </nav>
+  </footer>
+
+  <script>
+    const boton = document.querySelector('.navegacion__hamburguesa');
+    const menu = document.querySelector('.navegacion__menu');
+    boton.addEventListener('click', () => {
+      const abierto = menu.classList.toggle('navegacion__menu--abierto');
+      boton.setAttribute('aria-expanded', abierto);
+    });
+  </script>
+</body>
+</html>

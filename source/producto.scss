@@ -1,0 +1,228 @@
+// ── VARIABLES ─────────────────────────────────────────────────
+$color-1:  #2DF9BC;
+$color-2:  #1CD2D5;
+$color-3:  #14BFFE;
+$color-4:  #1C6ED9;
+$color-5:  #1641FF;
+
+$color-1b: #73FBD3;
+$color-2b: #44E5E7;
+$color-3b: #59D2FE;
+$color-4b: #4A8FE7;
+$color-5b: #5C7AFF;
+
+$color-blanco: #ffffff;
+$color-negro:  #000000;
+
+$fuente-titulo: 'Merriweather Sans', sans-serif;
+$fuente-cuerpo: 'Roboto', sans-serif;
+
+$breakpoint-escritorio: 1024px;
+
+// ── MIXIN ──────────────────────────────────────────────────────
+@mixin escritorio {
+  @media (min-width: #{$breakpoint-escritorio}) { @content; }
+}
+
+// ── RESET ──────────────────────────────────────────────────────
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: $fuente-cuerpo; color: $color-negro; }
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+
+// ── BOTONES ────────────────────────────────────────────────────
+.boton {
+  font-family: $fuente-titulo;
+  font-weight: 700;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  border: 2px solid $color-negro;
+  cursor: pointer;
+  background: $color-blanco;
+  color: $color-negro;
+
+  &--primario { background: $color-5;  color: $color-blanco; border-color: $color-5; }
+  &--seguir {
+    display: block;
+    width: 100%;
+    background: $color-5b;
+    color: $color-blanco;
+    border-color: $color-5b;
+    padding: 0.75rem;
+    border-radius: 50px;
+  }
+}
+
+// ── NAVEGACION ─────────────────────────────────────────────────
+.navegacion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid $color-2b;
+  position: relative;
+
+  &__logo {
+    font-family: $fuente-titulo;
+    font-weight: 800;
+    font-size: 0.85rem;
+    line-height: 1.1;
+
+    span { color: $color-5; font-size: 1.2rem; display: block; }
+  }
+
+  &__hamburguesa {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    span { display: block; width: 24px; height: 2px; background: $color-negro; }
+  }
+
+  &__menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: $color-blanco;
+    border-bottom: 1px solid $color-2b;
+    z-index: 10;
+
+    &--abierto { display: flex; }
+  }
+
+  &__enlace {
+    display: block;
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid $color-2b;
+  }
+
+  &__acciones {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  @include escritorio {
+    padding: 0.75rem 2rem;
+
+    &__hamburguesa { display: none; }
+
+    &__menu {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: static;
+      background: none;
+      border: none;
+      gap: 1.5rem;
+      flex: 1;
+      margin-left: 2rem;
+    }
+
+    &__enlace { padding: 0; border: none; }
+    &__acciones { padding: 0; margin-left: auto; }
+  }
+}
+
+// ── LAYOUT ─────────────────────────────────────────────────────
+.contenido-producto {
+  background: $color-2;
+  padding: 1rem;
+}
+
+// ── PRODUCTO ───────────────────────────────────────────────────
+.producto {
+  background: $color-blanco;
+  border: 2px solid $color-2b;
+  border-radius: 8px;
+  padding: 1rem;
+
+  &__imagen {
+    width: 100%;
+    height: 220px;
+    background: $color-1b;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+
+  &__titulo {
+    font-family: $fuente-titulo;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  &__etiqueta {
+    display: inline-block;
+    background: $color-1;
+    border-radius: 50px;
+    padding: 0.15rem 0.75rem;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__empresa {
+    font-family: $fuente-titulo;
+    font-weight: 800;
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  &__descripcion {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  @include escritorio {
+    display: flex;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    &__imagen {
+      width: 420px;
+      height: 480px;
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+
+    &__info { flex: 1; }
+    &__empresa { font-size: 2.5rem; }
+  }
+}
+
+// ── PIE ────────────────────────────────────────────────────────
+.pie {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid $color-2b;
+  font-size: 0.85rem;
+
+  address { font-style: normal; }
+
+  &__redes {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  &__icono {
+    width: 28px;
+    height: 28px;
+  }
+
+  @include escritorio {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

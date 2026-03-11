@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced TFG – Proyectos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="lista_productos.css" />
+</head>
+<body>
+
+  <header class="navegacion">
+    <a href="homepage.html" class="navegacion__logo">
+      ADVANCED<span>TFG</span>
+    </a>
+    <button class="navegacion__hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="navegacion__menu" id="menu" aria-label="Navegación principal">
+      <a href="homepage.html" class="navegacion__enlace">Homepage</a>
+      <a href="lista_productos.html" class="navegacion__enlace">Proyectos</a>
+      <div class="navegacion__acciones">
+        <a href="#" class="boton">Registrarse</a>
+        <a href="#" class="boton boton--primario">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenido-productos">
+
+    <aside class="filtros" aria-label="Filtros de búsqueda">
+      <button class="filtros__fab" aria-label="Abrir filtros" aria-expanded="false" aria-controls="panel-filtros">≡</button>
+
+      <div class="filtros__panel" id="panel-filtros">
+        <label for="buscar" class="sr-only">Buscar</label>
+        <input id="buscar" type="search" class="filtros__busqueda" placeholder="Buscar" />
+
+        <fieldset class="filtros__grupo">
+          <legend class="sr-only">Categorías</legend>
+          <label class="filtros__etiqueta"><input type="checkbox" /> Checkbox</label>
+          <label class="filtros__etiqueta"><input type="checkbox" checked /> Checkbox</label>
+          <label class="filtros__etiqueta"><input type="checkbox" /> Checkbox</label>
+          <label class="filtros__etiqueta"><input type="checkbox" checked /> Checkbox</label>
+        </fieldset>
+
+        <fieldset class="filtros__grupo">
+          <legend class="sr-only">Disponibilidad</legend>
+          <label class="filtros__etiqueta"><input type="checkbox" checked /> On</label>
+          <label class="filtros__etiqueta"><input type="checkbox" /> Off</label>
+          <label class="filtros__etiqueta"><input type="checkbox" /> Off</label>
+          <label class="filtros__etiqueta"><input type="checkbox" checked /> On</label>
+        </fieldset>
+
+        <label for="sel1" class="sr-only">Selector 1</label>
+        <select id="sel1" class="filtros__selector"><option>Selector</option></select>
+        <label for="sel2" class="sr-only">Selector 2</label>
+        <select id="sel2" class="filtros__selector"><option>Selector</option></select>
+        <label for="sel3" class="sr-only">Selector 3</label>
+        <select id="sel3" class="filtros__selector"><option>Selector</option></select>
+
+        <button type="button" class="boton boton--buscar">Buscar</button>
+      </div>
+    </aside>
+
+    <section class="publicaciones" aria-label="Listado de proyectos">
+      <ul class="publicaciones__lista">
+        <li class="tarjeta-publicacion">
+          <div class="tarjeta-publicacion__imagen" role="img" aria-label="Imagen del proyecto"></div>
+          <div class="tarjeta-publicacion__cuerpo">
+            <h2 class="tarjeta-publicacion__titulo">Ejemplo de publicación</h2>
+            <p class="tarjeta-publicacion__descripcion">Ejemplo de definición de una publicación. Ejemplo.</p>
+            <div class="tarjeta-publicacion__acciones">
+              <button type="button" class="boton boton--seguir">Seguir</button>
+              <a href="producto.html" class="boton boton--detalles">Detalles</a>
+            </div>
+          </div>
+        </li>
+        <li class="tarjeta-publicacion">
+          <div class="tarjeta-publicacion__imagen" role="img" aria-label="Imagen del proyecto"></div>
+          <div class="tarjeta-publicacion__cuerpo">
+            <h2 class="tarjeta-publicacion__titulo">Ejemplo de publicación</h2>
+            <p class="tarjeta-publicacion__descripcion">Ejemplo de definición de una publicación. Ejemplo.</p>
+            <div class="tarjeta-publicacion__acciones">
+              <button type="button" class="boton boton--seguir">Seguir</button>
+              <a href="producto.html" class="boton boton--detalles">Detalles</a>
+            </div>
+          </div>
+        </li>
+        <li class="tarjeta-publicacion">
+          <div class="tarjeta-publicacion__imagen" role="img" aria-label="Imagen del proyecto"></div>
+          <div class="tarjeta-publicacion__cuerpo">
+            <h2 class="tarjeta-publicacion__titulo">Ejemplo de publicación</h2>
+            <p class="tarjeta-publicacion__descripcion">Ejemplo de definición de una publicación. Ejemplo.</p>
+            <div class="tarjeta-publicacion__acciones">
+              <button type="button" class="boton boton--seguir">Seguir</button>
+              <a href="producto.html" class="boton boton--detalles">Detalles</a>
+            </div>
+          </div>
+        </li>
+        <li class="tarjeta-publicacion">
+          <div class="tarjeta-publicacion__imagen" role="img" aria-label="Imagen del proyecto"></div>
+          <div class="tarjeta-publicacion__cuerpo">
+            <h2 class="tarjeta-publicacion__titulo">Ejemplo de publicación</h2>
+            <p class="tarjeta-publicacion__descripcion">Ejemplo de definición de una publicación. Ejemplo.</p>
+            <div class="tarjeta-publicacion__acciones">
+              <button type="button" class="boton boton--seguir">Seguir</button>
+              <a href="producto.html" class="boton boton--detalles">Detalles</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <address>
+      <span>Tel: 999 999 999</span>
+      <span>E-Mail: ejemplo@ejemplo.com</span>
+    </address>
+    <nav class="pie__redes" aria-label="Redes sociales">
+      <a href="#" aria-label="YouTube"><img class="pie__icono" src="img/youtube.png" alt="YouTube" /></a>
+      <a href="#" aria-label="GitHub"><img class="pie__icono" src="img/github.png" alt="GitHub" /></a>
+    </nav>
+  </footer>
+
+  <script>
+    const boton = document.querySelector('.navegacion__hamburguesa');
+    const menu = document.querySelector('.navegacion__menu');
+    boton.addEventListener('click', () => {
+      const abierto = menu.classList.toggle('navegacion__menu--abierto');
+      boton.setAttribute('aria-expanded', abierto);
+    });
+
+    const fab = document.querySelector('.filtros__fab');
+    const panel = document.querySelector('.filtros__panel');
+    fab.addEventListener('click', () => {
+      const abierto = panel.classList.toggle('filtros__panel--abierto');
+      fab.setAttribute('aria-expanded', abierto);
+    });
+  </script>
+</body>
+</html>

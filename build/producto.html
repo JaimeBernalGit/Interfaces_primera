@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced TFG – Detalle del proyecto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400;700;800&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="producto.css" />
+</head>
+<body>
+
+  <header class="navegacion">
+    <a href="homepage.html" class="navegacion__logo">
+      ADVANCED<span>TFG</span>
+    </a>
+    <button class="navegacion__hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="navegacion__menu" id="menu" aria-label="Navegación principal">
+      <a href="homepage.html" class="navegacion__enlace">Homepage</a>
+      <a href="lista_productos.html" class="navegacion__enlace">Proyectos</a>
+      <div class="navegacion__acciones">
+        <a href="#" class="boton">Registrarse</a>
+        <a href="#" class="boton boton--primario">Login</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contenido-producto">
+    <article class="producto">
+      <div class="producto__imagen" role="img" aria-label="Imagen del proyecto"></div>
+
+      <div class="producto__info">
+        <h1 class="producto__titulo">Título del proyecto</h1>
+        <span class="producto__etiqueta">Tag</span>
+        <h2 class="producto__empresa">Empresa</h2>
+        <p class="producto__descripcion">
+          Descripción avanzada de dicho proyecto:
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam blandit lorem ut
+          maximus pretium. Ut ultrices dolor in porta efficitur. Aenean ut tempor dui.
+          Phasellus semper eleifend urna, et accumsan urna consequat quis. Donec quis ante
+          ut metus viverra egestas vitae venenatis enim. Mauris ornare ac leo vitae ornare.
+          Suspendisse congue urna non lorem imperdiet, ut lacinia libero lobortis.
+          Aenean ut tempor dui. Phasellus semper eleifend urna, et accumsan urna consequat
+          quis. Donec quis ante ut metus viverra egestas vitae venenatis enim. Mauris ornare
+          ac leo vitae ornare. Suspendisse congue urna non lorem imperdiet, ut lacinia libero
+          lobortis. Mauris luctus odio orci, sed auctor nisi sollicitudin viverra.
+        </p>
+        <button type="button" class="boton boton--seguir">Seguir</button>
+      </div>
+    </article>
+  </main>
+
+  <footer class="pie">
+    <address>
+      <span>Tel: 999 999 999</span>
+      <span>E-Mail: ejemplo@ejemplo.com</span>
+    </address>
+    <nav class="pie__redes" aria-label="Redes sociales">
+      <a href="#" aria-label="YouTube"><img class="pie__icono" src="img/youtube.png" alt="YouTube" /></a>
+      <a href="#" aria-label="GitHub"><img class="pie__icono" src="img/github.png" alt="GitHub" /></a>
+    </nav>
+  </footer>
+
+  <script>
+    const boton = document.querySelector('.navegacion__hamburguesa');
+    const menu = document.querySelector('.navegacion__menu');
+    boton.addEventListener('click', () => {
+      const abierto = menu.classList.toggle('navegacion__menu--abierto');
+      boton.setAttribute('aria-expanded', abierto);
+    });
+  </script>
+</body>
+</html>
