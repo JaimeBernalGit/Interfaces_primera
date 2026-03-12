@@ -47,16 +47,9 @@ img {
   border-bottom: 1px solid #44E5E7;
   position: relative;
 }
-.navegacion__logo {
-  font-family: "Merriweather Sans", sans-serif;
-  font-weight: 800;
-  font-size: 0.85rem;
-  line-height: 1.1;
-}
-.navegacion__logo span {
-  color: #1641FF;
-  font-size: 1.2rem;
-  display: block;
+.navegacion__logo img {
+  height: 100px;
+  width: auto;
 }
 .navegacion__hamburguesa {
   display: flex;
@@ -192,7 +185,7 @@ img {
 }
 
 .footer {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem;
@@ -213,6 +206,7 @@ img {
 }
 @media (min-width: 1024px) {
   .footer {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

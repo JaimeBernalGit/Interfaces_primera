@@ -17,11 +17,11 @@ $color-negro:  #000000;
 $fuente-titulo: 'Merriweather Sans', sans-serif;
 $fuente-cuerpo: 'Roboto', sans-serif;
 
-$breakpoint-desktop: 1024px;
+$breakpoint-escritorio: 1024px;
 
 // ── MIXIN ──────────────────────────────────────────────────────
-@mixin desktop {
-  @media (min-width: #{$breakpoint-desktop}) { @content; }
+@mixin escritorio {
+  @media (min-width: #{$breakpoint-escritorio}) { @content; }
 }
 
 // ── RESET ──────────────────────────────────────────────────────
@@ -59,12 +59,7 @@ img { display: block; max-width: 100%; }
   position: relative;
 
   &__logo {
-    font-family: $fuente-titulo;
-    font-weight: 800;
-    font-size: 0.85rem;
-    line-height: 1.1;
-
-    span { color: $color-5; font-size: 1.2rem; display: block; }
+    img { height: 100px; width: auto; }
   }
 
   &__hamburguesa {
@@ -104,7 +99,7 @@ img { display: block; max-width: 100%; }
     padding: 1rem;
   }
 
-  @include desktop {
+  @include escritorio {
     padding: 0.75rem 2rem;
 
     &__hamburguesa { display: none; }
@@ -146,7 +141,7 @@ img { display: block; max-width: 100%; }
     justify-content: center;
   }
 
-  @include desktop {
+  @include escritorio {
     &__titulo { font-size: 3rem; }
   }
 }
@@ -167,7 +162,7 @@ img { display: block; max-width: 100%; }
     grid-template-columns: 1fr;
     gap: 1rem;
 
-    @include desktop {
+    @include escritorio {
       grid-template-columns: repeat(4, 1fr);
     }
   }
@@ -200,9 +195,9 @@ img { display: block; max-width: 100%; }
   }
 }
 
-// ── FOOTER ────────────────────────────────────────────────────────
+// ── PIE ────────────────────────────────────────────────────────
 .footer {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem;
@@ -222,7 +217,8 @@ img { display: block; max-width: 100%; }
     height: 28px;
   }
 
-  @include desktop {
+  @include escritorio {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

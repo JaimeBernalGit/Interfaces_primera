@@ -17,11 +17,11 @@ $color-negro:  #000000;
 $fuente-titulo: 'Merriweather Sans', sans-serif;
 $fuente-cuerpo: 'Roboto', sans-serif;
 
-$breakpoint-desktop: 1024px;
+$breakpoint-escritorio: 1024px;
 
 // ── MIXIN ──────────────────────────────────────────────────────
-@mixin desktop {
-  @media (min-width: #{$breakpoint-desktop}) { @content; }
+@mixin escritorio {
+  @media (min-width: #{$breakpoint-escritorio}) { @content; }
 }
 
 // ── RESET ──────────────────────────────────────────────────────
@@ -68,12 +68,7 @@ img { display: block; max-width: 100%; }
   position: relative;
 
   &__logo {
-    font-family: $fuente-titulo;
-    font-weight: 800;
-    font-size: 0.85rem;
-    line-height: 1.1;
-
-    span { color: $color-5; font-size: 1.2rem; display: block; }
+    img { height: 100px; width: auto; }
   }
 
   &__hamburguesa {
@@ -113,7 +108,7 @@ img { display: block; max-width: 100%; }
     padding: 1rem;
   }
 
-  @include desktop {
+  @include escritorio {
     padding: 0.75rem 2rem;
 
     &__hamburguesa { display: none; }
@@ -139,7 +134,7 @@ img { display: block; max-width: 100%; }
 .contenido-productos {
   background: $color-2;
 
-  @include desktop {
+  @include escritorio {
     display: grid;
     grid-template-columns: 280px 1fr;
     gap: 1rem;
@@ -162,7 +157,7 @@ img { display: block; max-width: 100%; }
     cursor: pointer;
     font-size: 1.4rem;
 
-    @include desktop { display: none; }
+    @include escritorio { display: none; }
   }
 
   &__panel {
@@ -172,13 +167,14 @@ img { display: block; max-width: 100%; }
     left: 1rem;
     width: calc(100% - 2rem);
     max-height: 80vh;
+    overflow-y: auto;
     background: $color-1;
     border-radius: 8px;
     padding: 1rem;
 
     &--abierto { display: block; }
 
-    @include desktop {
+    @include escritorio {
       display: block;
       position: static;
       width: auto;
@@ -233,7 +229,7 @@ img { display: block; max-width: 100%; }
     gap: 1rem;
   }
 
-  @include desktop { padding: 1rem 0; }
+  @include escritorio { padding: 1rem 0; }
 }
 
 // ── TARJETA PUBLICACION ────────────────────────────────────────
@@ -263,7 +259,7 @@ img { display: block; max-width: 100%; }
     gap: 0.5rem;
   }
 
-  @include desktop {
+  @include escritorio {
     display: flex;
     gap: 1rem;
 
@@ -278,9 +274,9 @@ img { display: block; max-width: 100%; }
   }
 }
 
-// ── FOOTER ────────────────────────────────────────────────────────
+// ── PIE ────────────────────────────────────────────────────────
 .footer {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem;
@@ -300,7 +296,8 @@ img { display: block; max-width: 100%; }
     height: 28px;
   }
 
-  @include desktop {
+  @include escritorio {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
