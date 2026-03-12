@@ -13,10 +13,10 @@
     <a href="homepage.html" class="navegacion__logo">
       <img src="logo.png" alt="Advanced TFG" />
     </a>
-    <button class="navegacion__hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+    <button class="navegacion__hamburguesa">
       <span></span><span></span><span></span>
     </button>
-    <nav class="navegacion__menu" id="menu" aria-label="Navegación principal">
+    <nav class="navegacion__menu" id="menu">
       <a href="homepage.html" class="navegacion__enlace">Homepage</a>
       <a href="lista_productos.html" class="navegacion__enlace">Proyectos</a>
       <div class="navegacion__acciones">
@@ -27,7 +27,7 @@
   </header>
 
   <main>
-    <section class="principal" aria-labelledby="titulo-principal">
+    <section class="principal">
       <h1 class="principal__titulo" id="titulo-principal">ADVANCED TFG</h1>
       <p class="principal__subtitulo">Conectando empresas y estudiantes</p>
       <div class="principal__acciones">
@@ -36,7 +36,7 @@
       </div>
     </section>
 
-    <section class="colaboradores" aria-labelledby="titulo-colaboradores">
+    <section class="colaboradores">
       <h2 class="colaboradores__titulo" id="titulo-colaboradores">Nuestros colaboradores</h2>
       <ul class="colaboradores__cuadricula">
         <li class="tarjeta">
@@ -107,9 +107,9 @@
       <span>Tel: 999 999 999</span>
       <span>E-Mail: ejemplo@ejemplo.com</span>
     </address>
-    <nav class="footer__redes" aria-label="Redes sociales">
-      <a href="#" aria-label="YouTube"><img class="footer__icono" src="youtube.png" alt="YouTube" /></a>
-      <a href="#" aria-label="GitHub"><img class="footer__icono" src="github.png" alt="GitHub" /></a>
+    <nav class="footer__redes">
+      <a href="#"><img class="footer__icono" src="youtube.png" alt="YouTube" /></a>
+      <a href="#"><img class="footer__icono" src="github.png" alt="GitHub" /></a>
     </nav>
   </footer>
 
@@ -118,7 +118,6 @@
     const menu = document.querySelector('.navegacion__menu');
     boton.addEventListener('click', () => {
       const abierto = menu.classList.toggle('navegacion__menu--abierto');
-      boton.setAttribute('aria-expanded', abierto);
     });
   </script>
 </body>

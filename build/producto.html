@@ -13,10 +13,10 @@
     <a href="homepage.html" class="navegacion__logo">
       <img src="logo.png" alt="Advanced TFG" />
     </a>
-    <button class="navegacion__hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+    <button class="navegacion__hamburguesa">
       <span></span><span></span><span></span>
     </button>
-    <nav class="navegacion__menu" id="menu" aria-label="Navegación principal">
+    <nav class="navegacion__menu" id="menu">
       <a href="homepage.html" class="navegacion__enlace">Homepage</a>
       <a href="lista_productos.html" class="navegacion__enlace">Proyectos</a>
       <div class="navegacion__acciones">
@@ -28,7 +28,7 @@
 
   <main class="contenido-producto">
     <article class="producto">
-      <div class="producto__imagen" role="img" aria-label="Imagen del proyecto"></div>
+      <div class="producto__imagen" role="img"></div>
 
       <div class="producto__info">
         <h1 class="producto__titulo">Título del proyecto</h1>
@@ -58,9 +58,9 @@
       <span>Tel: 999 999 999</span>
       <span>E-Mail: ejemplo@ejemplo.com</span>
     </address>
-    <nav class="footer__redes" aria-label="Redes sociales">
-      <a href="#" aria-label="YouTube"><img class="footer__icono" src="youtube.png" alt="YouTube" /></a>
-      <a href="#" aria-label="GitHub"><img class="footer__icono" src="github.png" alt="GitHub" /></a>
+    <nav class="footer__redes">
+      <a href="#"><img class="footer__icono" src="youtube.png" alt="YouTube" /></a>
+      <a href="#"><img class="footer__icono" src="github.png" alt="GitHub" /></a>
     </nav>
   </footer>
 
@@ -69,7 +69,6 @@
     const menu = document.querySelector('.navegacion__menu');
     boton.addEventListener('click', () => {
       const abierto = menu.classList.toggle('navegacion__menu--abierto');
-      boton.setAttribute('aria-expanded', abierto);
     });
   </script>
 </body>

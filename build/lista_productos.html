@@ -13,10 +13,10 @@
     <a href="homepage.html" class="navegacion__logo">
       <img src="logo.png" alt="Advanced TFG" />
     </a>
-    <button class="navegacion__hamburguesa" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+    <button class="navegacion__hamburguesa">
       <span></span><span></span><span></span>
     </button>
-    <nav class="navegacion__menu" id="menu" aria-label="Navegación principal">
+    <nav class="navegacion__menu" id="menu">
       <a href="homepage.html" class="navegacion__enlace">Homepage</a>
       <a href="lista_productos.html" class="navegacion__enlace">Proyectos</a>
       <div class="navegacion__acciones">
@@ -28,8 +28,8 @@
 
   <main class="contenido-productos">
 
-    <aside class="filtros" aria-label="Filtros de búsqueda">
-      <button class="filtros__mob" aria-label="Abrir filtros" aria-expanded="false" aria-controls="panel-filtros">≡</button>
+    <aside class="filtros">
+      <button class="filtros__mob">≡</button>
 
       <div class="filtros__panel" id="panel-filtros">
         <label for="buscar" class="sr-only">Buscar</label>
@@ -60,10 +60,10 @@
       </div>
     </aside>
 
-    <section class="publicaciones" aria-label="Listado de proyectos">
+    <section class="publicaciones">
       <ul class="publicaciones__lista">
         <li class="tarjeta-publicacion">
-          <div class="tarjeta-publicacion__imagen" role="img" aria-label="Imagen del proyecto"></div>
+          <div class="tarjeta-publicacion__imagen" role="img"></div>
           <div class="tarjeta-publicacion__cuerpo">
             <h2 class="tarjeta-publicacion__titulo">Ejemplo de publicación</h2>
             <p class="tarjeta-publicacion__descripcion">Ejemplo de definición de una publicación. Ejemplo.</p>
@@ -74,7 +74,7 @@
           </div>
         </li>
         <li class="tarjeta-publicacion">
-          <div class="tarjeta-publicacion__imagen" role="img" aria-label="Imagen del proyecto"></div>
+          <div class="tarjeta-publicacion__imagen" role="img"></div>
           <div class="tarjeta-publicacion__cuerpo">
             <h2 class="tarjeta-publicacion__titulo">Ejemplo de publicación</h2>
             <p class="tarjeta-publicacion__descripcion">Ejemplo de definición de una publicación. Ejemplo.</p>
@@ -85,7 +85,7 @@
           </div>
         </li>
         <li class="tarjeta-publicacion">
-          <div class="tarjeta-publicacion__imagen" role="img" aria-label="Imagen del proyecto"></div>
+          <div class="tarjeta-publicacion__imagen" role="img"></div>
           <div class="tarjeta-publicacion__cuerpo">
             <h2 class="tarjeta-publicacion__titulo">Ejemplo de publicación</h2>
             <p class="tarjeta-publicacion__descripcion">Ejemplo de definición de una publicación. Ejemplo.</p>
@@ -96,7 +96,7 @@
           </div>
         </li>
         <li class="tarjeta-publicacion">
-          <div class="tarjeta-publicacion__imagen" role="img" aria-label="Imagen del proyecto"></div>
+          <div class="tarjeta-publicacion__imagen" role="img"></div>
           <div class="tarjeta-publicacion__cuerpo">
             <h2 class="tarjeta-publicacion__titulo">Ejemplo de publicación</h2>
             <p class="tarjeta-publicacion__descripcion">Ejemplo de definición de una publicación. Ejemplo.</p>
@@ -116,9 +116,9 @@
       <span>Tel: 999 999 999</span>
       <span>E-Mail: ejemplo@ejemplo.com</span>
     </address>
-    <nav class="footer__redes" aria-label="Redes sociales">
-      <a href="#" aria-label="YouTube"><img class="footer__icono" src="youtube.png" alt="YouTube" /></a>
-      <a href="#" aria-label="GitHub"><img class="footer__icono" src="github.png" alt="GitHub" /></a>
+    <nav class="footer__redes">
+      <a href="#"><img class="footer__icono" src="youtube.png" alt="YouTube" /></a>
+      <a href="#"><img class="footer__icono" src="github.png" alt="GitHub" /></a>
     </nav>
   </footer>
 
@@ -127,13 +127,11 @@
     const menu = document.querySelector('.navegacion__menu');
     boton.addEventListener('click', () => {
       const abierto = menu.classList.toggle('navegacion__menu--abierto');
-      boton.setAttribute('aria-expanded', abierto);
     });
       const mob = document.querySelector('.filtros__mob');
     const panel = document.querySelector('.filtros__panel');
     mob.addEventListener('click', () => {
       const abierto = panel.classList.toggle('filtros__panel--abierto');
-      mob.setAttribute('aria-expanded', abierto);
     });
   </script>
 </body>
