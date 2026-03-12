@@ -1,4 +1,4 @@
-// ── VARIABLES ─────────────────────────────────────────────────
+// variables de colores y fuentes/ breakpoint para pasar a desktop
 $color-1:  #2DF9BC;
 $color-2:  #1CD2D5;
 $color-3:  #14BFFE;
@@ -19,19 +19,19 @@ $fuente-cuerpo: 'Roboto', sans-serif;
 
 $breakpoint-escritorio: 1024px;
 
-// ── MIXIN ──────────────────────────────────────────────────────
+// mixin para desktop
 @mixin escritorio {
   @media (min-width: #{$breakpoint-escritorio}) { @content; }
 }
 
-// ── RESET ──────────────────────────────────────────────────────
+// general
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: $fuente-cuerpo; color: $color-negro; }
 ul { list-style: none; }
 a { text-decoration: none; color: inherit; }
 img { display: block; max-width: 100%; }
 
-// ── BOTONES ────────────────────────────────────────────────────
+// botones
 .boton {
   font-family: $fuente-titulo;
   font-weight: 700;
@@ -54,7 +54,7 @@ img { display: block; max-width: 100%; }
   }
 }
 
-// ── NAVEGACION ─────────────────────────────────────────────────
+// header/ nav
 .navegacion {
   display: flex;
   align-items: center;
@@ -126,13 +126,13 @@ img { display: block; max-width: 100%; }
   }
 }
 
-// ── LAYOUT ─────────────────────────────────────────────────────
+// layout para producto
 .contenido-producto {
   background: $color-2;
   padding: 1rem;
 }
 
-// ── PRODUCTO ───────────────────────────────────────────────────
+// producto
 .producto {
   background: $color-blanco;
   border: 2px solid $color-2b;
@@ -193,7 +193,7 @@ img { display: block; max-width: 100%; }
   }
 }
 
-// ── PIE ────────────────────────────────────────────────────────
+// footer
 .footer {
   display: none;
   flex-direction: column;

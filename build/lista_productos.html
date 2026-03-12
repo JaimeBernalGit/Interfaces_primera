@@ -129,6 +129,12 @@
       const abierto = menu.classList.toggle('navegacion__menu--abierto');
       boton.setAttribute('aria-expanded', abierto);
     });
+      const mob = document.querySelector('.filtros__mob');
+    const panel = document.querySelector('.filtros__panel');
+    mob.addEventListener('click', () => {
+      const abierto = panel.classList.toggle('filtros__panel--abierto');
+      mob.setAttribute('aria-expanded', abierto);
+    });
   </script>
 </body>
 </html>

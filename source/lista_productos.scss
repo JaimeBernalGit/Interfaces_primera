@@ -1,4 +1,4 @@
-// ── VARIABLES ─────────────────────────────────────────────────
+// variables
 $color-1:  #2DF9BC;
 $color-2:  #1CD2D5;
 $color-3:  #14BFFE;
@@ -19,19 +19,19 @@ $fuente-cuerpo: 'Roboto', sans-serif;
 
 $breakpoint-escritorio: 1024px;
 
-// ── MIXIN ──────────────────────────────────────────────────────
+// mixin para desktiop
 @mixin escritorio {
   @media (min-width: #{$breakpoint-escritorio}) { @content; }
 }
 
-// ── RESET ──────────────────────────────────────────────────────
+// general
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: $fuente-cuerpo; color: $color-negro; }
 ul { list-style: none; }
 a { text-decoration: none; color: inherit; }
 img { display: block; max-width: 100%; }
 
-// ── BOTONES ────────────────────────────────────────────────────
+// botones
 .boton {
   font-family: $fuente-titulo;
   font-weight: 700;
@@ -58,7 +58,7 @@ img { display: block; max-width: 100%; }
   }
 }
 
-// ── NAVEGACION ─────────────────────────────────────────────────
+// header/ nav
 .navegacion {
   display: flex;
   align-items: center;
@@ -130,7 +130,7 @@ img { display: block; max-width: 100%; }
   }
 }
 
-// ── LAYOUT ─────────────────────────────────────────────────────
+// layout para productos
 .contenido-productos {
   background: $color-2;
 
@@ -142,7 +142,7 @@ img { display: block; max-width: 100%; }
   }
 }
 
-// ── FILTROS ────────────────────────────────────────────────────
+// flitros
 .filtros {
   &__mob {
     position: fixed;
@@ -219,7 +219,7 @@ img { display: block; max-width: 100%; }
   }
 }
 
-// ── PUBLICACIONES ──────────────────────────────────────────────
+// publicaciones
 .publicaciones {
   padding: 1rem;
 
@@ -232,7 +232,7 @@ img { display: block; max-width: 100%; }
   @include escritorio { padding: 1rem 0; }
 }
 
-// ── TARJETA PUBLICACION ────────────────────────────────────────
+// tarjetas de publicaciones
 .tarjeta-publicacion {
   background: $color-blanco;
   border-radius: 8px;
@@ -274,7 +274,7 @@ img { display: block; max-width: 100%; }
   }
 }
 
-// ── PIE ────────────────────────────────────────────────────────
+// footer
 .footer {
   display: none;
   flex-direction: column;
